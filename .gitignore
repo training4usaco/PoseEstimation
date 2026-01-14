@@ -1,5 +1,4 @@
 .idea/
-config.txt
 system/
 __pycache__/
 *.py[cod]
@@ -7,4 +6,3 @@ __pycache__/
 venv/
 .env
 .DS_Store
-Pose/

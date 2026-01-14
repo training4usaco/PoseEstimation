@@ -128,6 +128,8 @@ for i in range(20):
 
     x = [coordinate[0] for coordinate in projected_coordinates]
     y = [coordinate[1] for coordinate in projected_coordinates]
+
+    # Normalization so we can have nice, square images that are centered at the hip joint
     image_dimension = max(max(max(x), abs(min(x))), max(max(y), abs(min(y))))
     x = [val / image_dimension for val in x]
     y = [val / image_dimension for val in y]
@@ -168,4 +170,3 @@ for i in range(20):
 
 OUTPUT_FILE = "full_pose_data.csv"
 np.savetxt(OUTPUT_FILE, final_rows, delimiter = ",", header = header, comments = '', fmt = format_list)
-print(f"Saved full dataset to {OUTPUT_FILE}")
